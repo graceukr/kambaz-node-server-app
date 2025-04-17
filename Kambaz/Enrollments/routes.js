@@ -1,3 +1,4 @@
+/*
 import * as enrollmentsDao from "./dao.js"
 
 export default function EnrollmentRoutes(app) {
@@ -8,7 +9,7 @@ export default function EnrollmentRoutes(app) {
         res.json(newEnrollment);
     });
     
-    app.post("/api/users/current/courses/:courseId/enrollments", (req, res) => {
+    app.delete("/api/users/current/courses/:courseId/enrollments", (req, res) => {
         const { courseId } = req.params;
         const currentUser = req.session["currentUser"];
         enrollmentsDao.unenrollUserFromCourse(currentUser._id, courseId);
@@ -19,4 +20,6 @@ export default function EnrollmentRoutes(app) {
         const enrollments = dao.findAllEnrollments();
         res.send(enrollments);
       });
+      
 }
+*/
